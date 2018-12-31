@@ -1,0 +1,41 @@
+.margin-tp
+{
+    margin-top: 2em
+}
+
+.float-right
+{
+    float:right;
+}
+
+.table td, .table th {
+    border: none;
+}
+
+table.table.table-condensed {
+    border: 1px solid black;
+}
+
+.table-schceme
+{
+    background:rgb(31, 121, 31); color: white
+}
+.btn-back
+{
+    background-color:rgb(31, 121, 31) ;
+    
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: unset;
+    border-style: none;
+}
+.image-size
+{
+    height: 96px;
+    width: 96px;
+}

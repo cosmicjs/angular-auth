@@ -1,0 +1,96 @@
+<div class="container">
+<!-- register form -->
+<div class="row margin-tp">
+
+  
+          <div class="col-md-4 col-sm-6 ml-auto mr-auto">
+              <!-- <h2>Register</h2> -->
+              <div class="card">
+                  <div class="card-header card-back"><b>Register</b></div>
+                  <div class="card-body">
+                    
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+              <fieldset class="form-group">
+                      <!-- <label>name</label> -->
+                      <input type="text" placeholder="Enter name" class="form-control" formControlName="fullName" required>
+                      <span *ngIf="!registerForm.controls.fullName.valid && registerForm.controls.fullName.errors['required'] && registerForm.controls.fullName.touched"
+                        class="help-block">
+                        Name is required.
+                      </span>
+                  </fieldset>
+              <fieldset class="form-group">
+                      <!-- <label>Email address</label> -->
+                      <input type="email" placeholder="Enter email" class="form-control" formControlName="email" required>
+                      <span *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.errors['required'] && registerForm.controls.email.touched"
+                        class="help-block">
+                        Email is required.
+                      </span>
+                      <span *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.errors['email'] && !registerForm.controls.email.errors['required'] && registerForm.controls.email.touched"
+                        class="help-block">
+                        Please enter valid mail.
+                      </span>
+                    </fieldset>
+
+
+              <fieldset class="form-group">
+                      
+                      <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" [(ngModel)]="userModel.password"
+                      (ngModelChange)="checkPasswordMatch($event)" required>
+                      <span *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.errors['required'] && registerForm.controls.password.touched && !registerForm.controls.password.errors['minLength']"
+                        class="help-block">
+                        Password is required.
+                      </span>
+                      <span *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.errors['pattern'] && !registerForm.controls.password.errors['minlength']  && !registerForm.controls.password.errors['required']"
+                                        class="help-block">
+                                        Enter valid password.
+                                        <br>  
+                                       
+                      <span class="help-block">
+                        Password must be 8 character long including at least 1 uppercase letter, 1 special character and alphanumeric characters.   
+                      </span> </span>
+                    </fieldset> 
+
+                    <fieldset class="form-group">
+                          <!-- <label>Confirm Password</label> -->
+                          <input type="password" placeholder=" Confirm Password" class="form-control" formControlName="confirmPassword" [(ngModel)]="userModel.confirmPassword"
+                            (ngModelChange)="checkConfirmPasswordMatch($event)" required >
+                          <span *ngIf="!registerForm.controls.confirmPassword.valid && registerForm.controls.confirmPassword.errors['required'] && registerForm.controls.confirmPassword.touched && !registerForm.controls.confirmPassword.errors['minlength'] "
+                            class="help-block">
+                            Confirm password is required.
+                          </span>
+                          <span class="help-block" *ngIf="!passwordMatched">
+                            Password does not matched.
+                          </span>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                          <!-- <label>mobile</label> -->
+                          <input type="text" placeholder="Enter mobile" class="form-control" formControlName="mobile" required>
+                          <span *ngIf="!registerForm.controls.mobile.valid && registerForm.controls.mobile.errors['required'] && registerForm.controls.mobile.touched"
+                            class="help-block">
+                            10 digit mobile number is required.
+                          </span>
+                          <span *ngIf="!registerForm.controls.mobile.valid && !registerForm.controls.mobile.errors['minlength']  && !registerForm.controls.mobile.errors['required']"
+                          class="help-block">
+                          Mobile number must be of 10 digits.
+                           </span>
+                      </fieldset>
+
+                        <fieldset class="form-group">
+              <select (change)="gender($event.target.value)"  class="form-control">
+                  <option value="not_selected">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+              </select></fieldset>           
+            
+              <button type="submit" class="btn btn-success btn-back" [disabled]=!registerForm.valid>Register</button>&nbsp;
+              <button class="btn btn-success btn-back" (click)="loginCall()">Login</button>
+             
+        </form> <p>{{loading}}</p><p>{{message}}</p></div>
+       
+      </div>
+       
+      </div>
+
+</div></div>
