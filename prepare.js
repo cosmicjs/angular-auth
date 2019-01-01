@@ -3,8 +3,8 @@ var fs = require('fs');
 var str = `
     export const config = {
         production: true,
-        write_key: '${process.env.COSMIC_WRITE_KEY}',
-        bucket_name: '${process.env.COSMIC_BUCKET}',
+        write_key: '${process.env.write_key}',
+        bucket_name: '${process.env.bucket_name}',
         
     };
 `;
