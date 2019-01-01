@@ -63,14 +63,11 @@ export class RegisterComponent implements OnInit {
     gender(value)
     {
       this.selectedGender = value;
-      // console.log(this.selectedGender)
     }
 
     //check the password and confirm password before submit
     checkPasswordMatch(password)
     {
-      // console.log(password);
-      // console.log(this.userModel.password)
       if(password == this.userModel.confirmPassword)
       {
         this.passwordMatched = true;

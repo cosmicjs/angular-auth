@@ -23,7 +23,6 @@ export class AuthenticationComponent implements OnInit {
   googleData: any;
   returnedData2: any;
   finalData: any;
-  // googleData: any = [];
 
   constructor(
     private _http: Http,
@@ -44,14 +43,11 @@ export class AuthenticationComponent implements OnInit {
   {
     this.loading = "loading...";
     const credentials = this.loginForm.value;
-    // console.log(credentials);
     this.userService.login(credentials)
     .subscribe((result)=>{
       this.loading = "";
       this.returnedData = result;
       var jsondata = JSON.parse(this.returnedData._body);
-      // console.log(jsondata);
-      // console.log(jsondata.objects[0].metadata.password)
       if (jsondata.message == "No objects returned.") {
       this.message = "Email or password don't matched";
       }
@@ -108,12 +104,7 @@ export class AuthenticationComponent implements OnInit {
            localStorage.setItem('googleUser', JSON.stringify(jsondata));
             this.router.navigate(['dashboard']);      
       }
-          })
-          // this.userService.googleRegister(userData)
-          // .subscribe((result)=>
-          // {
-          //   console.log(result);
-          // })                 
+          })               
         }
       );
       }

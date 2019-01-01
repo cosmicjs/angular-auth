@@ -65,7 +65,7 @@
 
                         <fieldset class="form-group">
                           <!-- <label>mobile</label> -->
-                          <input type="text" placeholder="Enter mobile" class="form-control" formControlName="mobile" required>
+                          <input type="text" placeholder="Enter 10 digit mobile number" class="form-control" formControlName="mobile" required>
                           <span *ngIf="!registerForm.controls.mobile.valid && registerForm.controls.mobile.errors['required'] && registerForm.controls.mobile.touched"
                             class="help-block">
                             10 digit mobile number is required.
