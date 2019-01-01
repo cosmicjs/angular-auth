@@ -1,7 +1,7 @@
 {
     "scripts": {
         "dokku": {
-            "predeploy": "ng build --aot --prod"
+            "predeploy": "ng build --prod"
         }
     }
 }
