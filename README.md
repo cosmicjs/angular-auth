@@ -1,4 +1,4 @@
-# NgAuth
+# Angular Auth
 
 ![Screenshot](https://cosmic-s3.imgix.net/ee2730a0-0e02-11e9-8f8f-dd1c79ca06a8-ng-Cosmic-JS-auth-HOme.png)
 
@@ -12,7 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 git clone https://github.com/a9kitkumar/angular_cosmicjs_auth
 cd angular_cosmicjs_auth
 npm install
-COSMIC_BUCKET=your-bucket-slug COSMIC_READ_KEY=your-read-key COSMIC_WRITE_KEY=your-write-key npm start
+COSMIC_BUCKET=your-bucket-slug COSMIC_READ_KEY=your-read-key COSMIC_WRITE_KEY=your-write-key npm run build
+npm start
 ```
 
 ## Development server
