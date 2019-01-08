@@ -1,5 +1,8 @@
-export const config = {
-    production: true,
-    write_key: 'CY4ZYtsD6OS4ydSbXL3KHMiA1t96VE8o0s18A5sMgkcwJd9XAE',
-    bucket_name: 'angularauth',     
+
+    export const config = {
+        production: true,
+        read_key: '',
+        write_key: '',
+        bucket_slug: 'auth-test',
+        URL: 'https://api.cosmicjs.com/v1/',
     };
