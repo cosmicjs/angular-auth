@@ -1,7 +1,0 @@
-{
-    "scripts": {
-        "dokku": {
-            "predeploy": "node prepare.js && ng build --aot --prod"
-        }
-    }
-}
