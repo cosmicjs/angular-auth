@@ -7,6 +7,7 @@ import {
   AuthService,
   GoogleLoginProvider,
 } from 'angular-6-social-login-v2';
+import { Base64 } from 'js-base64';
 
 @Component({
   selector: 'app-authentication',
@@ -43,6 +44,7 @@ export class AuthenticationComponent implements OnInit {
   {
     this.loading = "loading...";
     const credentials = this.loginForm.value;
+    credentials.password = Base64.encode(credentials.password)
     this.userService.login(credentials)
     .subscribe((result)=>{
       this.loading = "";
@@ -50,11 +52,16 @@ export class AuthenticationComponent implements OnInit {
       var jsondata = JSON.parse(this.returnedData._body);
       if (jsondata.message == "No objects returned.") {
       this.message = "Email or password don't matched";
+      return;
       }
       else if(credentials.password == jsondata.objects[0].metadata.password )
       {
         localStorage.setItem('currentUser', JSON.stringify(jsondata));
         this.router.navigate(['dashboard']);
+      }
+      else
+      {
+        this.message = "Password is wrong!!";
       }
     })
   }
