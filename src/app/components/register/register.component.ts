@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { userModel } from './../../models/user.model';
 import { Router } from '@angular/router';
 import { ApicallService } from './../../services/apicall.service';
+import { Base64 } from 'js-base64';
 
 @Component({
   selector: 'app-register',
@@ -40,6 +41,7 @@ export class RegisterComponent implements OnInit {
   this.loading = "loading...";
     const data = this.registerForm.value;
     data.gender = this.selectedGender;
+    data.password = Base64.encode(data.password);
     this.userService.login(data)
     .subscribe(res => {
       this.loading = "";
