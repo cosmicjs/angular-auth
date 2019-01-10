@@ -25,7 +25,7 @@ export class ApicallService {
 
   //register user with email
   register(data: userModel) {
-    console.log(data);
+    console.log(data.password);
     return this._http.post(config.URL + config.bucket_slug + "/add-object/", {
       title: data.fullName, slug: data.fullName + data.email, type_slug: 'users', write_key: config.write_key,
 
@@ -94,7 +94,7 @@ export class ApicallService {
         {
           key: "password",
           type: "text",
-          value: data.id
+          value: 'N/A'
         },
         {
           key: "gender",
