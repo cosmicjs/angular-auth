@@ -1,7 +1,7 @@
 <img src="https://cosmic-s3.imgix.net/918b3000-1517-11e9-b639-ff9ababa68ba-angular.jpg?w=1200" width="600" />
 
 # Angular Auth
-Authentication app powered by Angular and [Cosmic JS](https://cosmicjs.com)
+Authentication app powered by Angular and [Cosmic JS](https://cosmicjs.com). [Read about how it was built](https://cosmicjs.com/articles/how-to-build-an-authentication-app-using-angular-6-and-cosmic-js-jqe0nsg0).
 
 ### [View the demo](https://cosmicjs.com/apps/angular-authentication-app)
 
