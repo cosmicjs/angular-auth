@@ -39,3 +39,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Import Bucket
+```
+You can download bucket.json file from this repo and import it to your Cosmic JS bucket. Follow the following steps:
+Login to Cosmic JS account
+Select your default bucket
+Goto Settings > Import/Export and click "Add import file", then choose downloaded "bucket.json" file
+
+```
