@@ -1,6 +1,9 @@
 <img src="https://cosmic-s3.imgix.net/918b3000-1517-11e9-b639-ff9ababa68ba-angular.jpg?w=1200" width="600" />
 
 # Angular Auth
+Authentication app powered by Angular and [Cosmic JS](https://cosmicjs.com)
+
+### [View the demo](https://cosmicjs.com/apps/angular-authentication-app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
