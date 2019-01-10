@@ -1,0 +1,35 @@
+{
+  "bucket": {
+    "_id": "5c3774e5fc35052f42ecaf20",
+    "slug": "angularauthentication",
+    "title": "AngularAuthentication",
+    "object_types": [
+      {
+        "title": "users",
+        "slug": "users",
+        "singular": "user",
+        "metafields": [],
+        "options": {
+          "slug_field": 1,
+          "content_editor": 1
+        },
+        "preview_link": "",
+        "priority_locale": null
+      },
+      {
+        "title": "googleusers",
+        "slug": "googleusers",
+        "singular": "googleuser",
+        "metafields": [],
+        "options": {
+          "slug_field": 1,
+          "content_editor": 1
+        },
+        "preview_link": "",
+        "priority_locale": null
+      }
+    ],
+    "objects": [],
+    "media": []
+  }
+}
