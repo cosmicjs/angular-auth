@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node app.js",
-    "now-build": "ng build --prod",
+    "build": "node prepare.js; ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -15,7 +15,7 @@
     "heroku"
   ],
   "engines": {
-    "node": "10.12.0",
+    "node": "8.12.0",
     "npm": "6.4.1"
   },
   "private": true,
